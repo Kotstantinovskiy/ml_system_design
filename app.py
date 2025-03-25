@@ -2,10 +2,9 @@ from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import torch
 
 model_name = "FacebookAI/xlm-roberta-large"
-tokenizer = AutoTokenizer.from_pretrained(model_name)
-model = AutoModelForSequenceClassification.from_pretrained(model_name)
+tokenizer = AutoTokenizer.from_pretrained('./final_model')
+model = AutoModelForSequenceClassification.from_pretrained('./final_model')
 
-# Define language labels based on the model's training
 LANGUAGE_LABELS = [
     'Acoli', 'Adangme', 'Adhola', 'Tunisian Arabic', 'Afrikaans', 'Alur', 'Amharic', 'Anuak', 
     'Arabic', 'Arabic with Diacritics', 'Assamese', 'Bemba', 'Bengali', 'Tibetan', 'Bukusu', 
